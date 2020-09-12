@@ -3,8 +3,9 @@ automate MICS dataset download
 
 TODO
 
-[ ] Port to an R package
-[ ] Checking file hash to ignore dowloadning existing file
+- [x] Login and download 
+- [ ] Port to an R package
+- [ ] Checking file hash to ignore dowloading existing file
 
 
 # Required libs
