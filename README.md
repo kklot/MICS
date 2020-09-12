@@ -4,14 +4,12 @@ automate MICS dataset download
 TODO
 
 - [x] Login and download 
-- [ ] Port to an R package
-- [ ] Checking file hash to ignore dowloading existing file
+- [ ] Refine popup deflection
 
-# To run
+# Install
 
 ```bash
-cd MICS
-python3 run.py
+pip3 install micsv
 ```
 
 Required libs
@@ -22,10 +20,35 @@ pip3 install selenium
 # and install whatever libs missing on your machine...
 ```
 
-- This will open a new browser window (Firefox in this case).
+# Run
+
+In terminal 
+```bash
+python3
+```
+In python
+```python
+from micsv import run_mics
+run_mics(versions = [], overwrite = False, save_to = ".", sleep = 5)
+```
+
+- `versions`: a list of MICS versions to download, empty means download
+  all from MICS2 to MICS6
+- `overwrite`: overwrite exising file in `save_to` directory
+- `save_to`: where to save the file, default to current working directory.
+  Perhaps better to do 
+  ```python
+  import os
+  os.chdir('path/to/where/to/save')
+  run_mics()
+  ```
+- `sleep`: required, sometime MICS website load too slow and needed time to
+  solve reCaptcha.
+
+- This program will open a new browser window (Firefox in this case).
 - Use your username, password, pass the reCaptcha and click login (then make no
   more movement in the browser please). 
-- The code will wait until MICS logged in successfully (3 minutes timeout) and
+- The code will wait until MICS logged in successfully (5 minutes timeout) and
   automatically redirect to surveys site.
 
 # Example outputs

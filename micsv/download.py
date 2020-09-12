@@ -1,4 +1,8 @@
-def get_dowload_links(browser, versions = [], sleep=5):
+import os, urllib, re, time
+from bs4 import BeautifulSoup
+from selenium.common.exceptions import NoSuchElementException
+
+def get_links(browser, versions = [], sleep=5):
     # if no version is provided, we download all, if a list we match and extract matched
     to_download = ["MICS"+str(i) for i in range(2,7)] # 2020
     if versions:
@@ -40,3 +44,20 @@ def get_dowload_links(browser, versions = [], sleep=5):
         page_index += 1
     print("There are "+str(len(links))+" file(s) detected.")
     return links
+
+def download(links, overwrite = False, save_to="."):
+    for file in links:
+        filename = urllib.parse.unquote(os.path.basename(file))
+        filepath = save_to+"/"+filename
+        fileexist = os.path.isfile(filepath)
+        if (fileexist):
+            print(filename+" is already existed.")
+            if (overwrite):
+                print('Downloading (overwrite) '+filename)
+                urllib.request.urlretrieve(file, savetofile)
+            else:
+                print("Skip downloading "+filename)
+                continue
+        else:
+            print('Downloading (overwrite) '+filename)
+            urllib.request.urlretrieve(file, savetofile)
