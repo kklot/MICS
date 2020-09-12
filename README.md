@@ -1,5 +1,5 @@
-# MICS
-automate MICS dataset download
+# MICSV
+**MIC**S **S**UR**V**EY: automate MICS dataset download
 
 TODO
 
