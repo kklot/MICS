@@ -10,6 +10,14 @@ TODO
 
 # Required libs
 
+Using python3
+
+```bash
+pip3 install bs4
+pip3 install selenium
+# and what libs you are still missing...
+```
+
 ```python
 import os, urllib
 from bs4 import BeautifulSoup
