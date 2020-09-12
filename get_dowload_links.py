@@ -1,4 +1,4 @@
-def get_dowload_links(versions = [], sleep=5, browser=browser):
+def get_dowload_links(browser, versions = [], sleep=5):
     # if no version is provided, we download all, if a list we match and extract matched
     to_download = ["MICS"+str(i) for i in range(2,7)] # 2020
     if versions:
