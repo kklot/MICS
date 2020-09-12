@@ -58,3 +58,5 @@ for file in links:
     filename = urllib.parse.unquote(re.sub('%20', '_', os.path.basename(file)))
     tst = urllib.request.urlretrieve(file, filename)
     print('Downloaded '+filename)
+
+browser.quit()
