@@ -10,7 +10,7 @@ TODO
 
 # Required libs
 
-Using python3
+See `meta.py`, tested using python3
 
 ```bash
 pip3 install bs4
@@ -30,22 +30,13 @@ If we run the whole script, the rest of the code will wait until MICS logged in 
 Get download urls
 
 ```python
-    1
-    2
-    3
-    4
-    5
-    6
-```
-
-Dowloading (to current directory)
-
-```python
-    DownloadedBangladesh_MICS6_SPSS_Datasets.zip
-    DownloadedTurkmenistan_MICS6_SPSS_Datasets.zip
-    DownloadedZimbabwe_MICS6_SPSS_Datasets.zip
-    DownloadedKiribati_MICS6_Datasets.zip
-    DownloadedRepublic_of_North_Macedonia_MICS6_Datasets.zip
-    DownloadedRepublic_of_North_Macedonia_%28Roma_Settlements%29_MICS6_Datasets.zip
-    ...
+Processing page 1
+Processing page 2
+Processing page 3
+Processing page 4
+Processing page 5
+Processing page 6
+There are 222 file(s) detected.
+The-Gambia-MICS6-Datasets.zip is already existed.
+Skip downloading The-Gambia-MICS6-Datasets.zip
 ```
