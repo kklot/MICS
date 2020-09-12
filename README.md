@@ -25,11 +25,6 @@ This will open a new browser window (Firefox in this case).
 Use your username, password, pass the reCaptcha and click login (then make no more movement in the browser please).
 If we run the whole script, the rest of the code will wait until MICS logged in successfully and automatically redirect to surveys site.
 
-```python
-def is_login(driver):
-    return(driver.current_url == target_url)
-WebDriverWait(browser).until(is_login)
-```
 # Example outputs
 
 Get download urls
