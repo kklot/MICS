@@ -55,6 +55,6 @@ while morepage:
 # see todo list: github.com/kklot/MICS
 # 
 for file in links:
-    filename = re.sub('%20', '_', os.path.basename(file))
+    filename = urllib.parse.unquote(re.sub('%20', '_', os.path.basename(file)))
     tst = urllib.request.urlretrieve(file, filename)
     print('Downloaded '+filename)
