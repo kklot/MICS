@@ -54,10 +54,10 @@ def download(links, overwrite = False, save_to="."):
             print(filename+" is already existed.")
             if (overwrite):
                 print('Downloading (overwrite) '+filename)
-                urllib.request.urlretrieve(file, savetofile)
+                urllib.request.urlretrieve(file, filepath)
             else:
                 print("Skip downloading "+filename)
                 continue
         else:
             print('Downloading (overwrite) '+filename)
-            urllib.request.urlretrieve(file, savetofile)
+            urllib.request.urlretrieve(file, filepath)
